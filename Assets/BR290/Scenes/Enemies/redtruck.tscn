@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://gpe8tsjjspmv"]
+
+[ext_resource type="Texture2D" uid="uid://diwfnb4f4w4h8" path="res://Assets/BR290/Automovels/RedTruck.png" id="1_86y4l"]
+[ext_resource type="Script" path="res://Scripts/BR290/Behaviors/cars.gd" id="1_i5v3v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swe0t"]
+size = Vector2(55.5, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0mpgv"]
+size = Vector2(126, 66)
+
+[node name="RedTruck" type="CharacterBody2D" groups=["RedTruck"]]
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_i5v3v")
+
+[node name="RedTruck" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_86y4l")
+
+[node name="RedTruckHitBox" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 1)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_swe0t")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-7, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 1)
+shape = SubResource("RectangleShape2D_0mpgv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

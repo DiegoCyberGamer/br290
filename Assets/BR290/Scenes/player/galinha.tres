@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://1xvd2mdih4tr"]
+
+[ext_resource type="Texture2D" uid="uid://dqojmv5lgyv8u" path="res://Assets/BR290/Galinhas/BlueChick/BlueChick.png" id="1_cefo2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_celt5"]
+atlas = ExtResource("1_cefo2")
+region = Rect2(80, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_celt5")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Moving_Up",
+"speed": 5.0
+}]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=9 format=3 uid="uid://crejkvxgl5dkq"]
+
+[ext_resource type="Script" path="res://Scripts/BR290/Spawners/Spawner.gd" id="1_8m6n7"]
+[ext_resource type="PackedScene" uid="uid://b8cmwsrv4b1o6" path="res://Assets/BR290/Scenes/Enemies/bike.tscn" id="2_wr0lt"]
+[ext_resource type="PackedScene" uid="uid://p2wnklm8bwy0" path="res://Assets/BR290/Scenes/Enemies/bluecar.tscn" id="3_1s3q2"]
+[ext_resource type="PackedScene" uid="uid://cvb8dutyqc31e" path="res://Assets/BR290/Scenes/Enemies/bluetruck.tscn" id="4_fyyjp"]
+[ext_resource type="PackedScene" uid="uid://7ki1303wj0co" path="res://Assets/BR290/Scenes/Enemies/greencar.tscn" id="5_o3ybw"]
+[ext_resource type="PackedScene" uid="uid://cfadim35a72rs" path="res://Assets/BR290/Scenes/Enemies/redcar.tscn" id="6_euck4"]
+[ext_resource type="PackedScene" uid="uid://gpe8tsjjspmv" path="res://Assets/BR290/Scenes/Enemies/redtruck.tscn" id="7_234jf"]
+
+[sub_resource type="Curve2D" id="Curve2D_5tq4p"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 585, -49, 0, 0, 0, 0, 586.647, 50.9778, 0, 0, 0, 0, 587, 280)
+}
+point_count = 3
+
+[node name="Spawner" type="Node2D"]
+position = Vector2(-611, 212)
+script = ExtResource("1_8m6n7")
+cars_array = Array[PackedScene]([ExtResource("2_wr0lt"), ExtResource("3_1s3q2"), ExtResource("4_fyyjp"), ExtResource("5_o3ybw"), ExtResource("6_euck4"), ExtResource("7_234jf")])
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(36, 0)
+curve = SubResource("Curve2D_5tq4p")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(585, -49)
+rotation = 1.55432

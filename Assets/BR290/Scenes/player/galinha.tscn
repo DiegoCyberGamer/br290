@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdhpskli1tx4x"]
+
+[ext_resource type="Script" path="res://Scripts/BR290/player.gd" id="1_m3djc"]
+[ext_resource type="Texture2D" uid="uid://dqojmv5lgyv8u" path="res://Assets/BR290/Galinhas/BlueChick/BlueChick.png" id="2_lfcj5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elu6m"]
+size = Vector2(44, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_celt5"]
+atlas = ExtResource("2_lfcj5")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_52npl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_celt5")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Moving_Up",
+"speed": 5.0
+}]
+
+[node name="Galinha" type="CharacterBody2D"]
+position = Vector2(264, 527)
+script = ExtResource("1_m3djc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-130, 72)
+shape = SubResource("RectangleShape2D_elu6m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-129.578, 69.2344)
+scale = Vector2(4.69726, 3.9707)
+sprite_frames = SubResource("SpriteFrames_52npl")
+animation = &"Idle"

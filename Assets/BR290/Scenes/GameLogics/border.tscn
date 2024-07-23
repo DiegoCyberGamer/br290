@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv6ny1dq56slf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xwlx"]
+size = Vector2(1023.14, 76.9478)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ia3jd"]
+size = Vector2(35, 665)
+
+[node name="Border" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(499.5, -29)
+shape = SubResource("RectangleShape2D_1xwlx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(508, 678)
+shape = SubResource("RectangleShape2D_1xwlx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-16.5, 322.5)
+shape = SubResource("RectangleShape2D_ia3jd")
+one_way_collision_margin = 0.0

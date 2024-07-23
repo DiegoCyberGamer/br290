@@ -1,0 +1,17 @@
+[gd_scene load_steps=8 format=3 uid="uid://tfxoaqxcinw8"]
+
+[ext_resource type="Script" path="res://Scripts/BR290/Spawners/Spawner.gd" id="1_518io"]
+[ext_resource type="PackedScene" uid="uid://b8cmwsrv4b1o6" path="res://Assets/BR290/Scenes/Enemies/bike.tscn" id="2_5jjrk"]
+[ext_resource type="PackedScene" uid="uid://p2wnklm8bwy0" path="res://Assets/BR290/Scenes/Enemies/bluecar.tscn" id="3_p108i"]
+[ext_resource type="PackedScene" uid="uid://cvb8dutyqc31e" path="res://Assets/BR290/Scenes/Enemies/bluetruck.tscn" id="4_woe6p"]
+[ext_resource type="PackedScene" uid="uid://7ki1303wj0co" path="res://Assets/BR290/Scenes/Enemies/greencar.tscn" id="5_1hmw5"]
+[ext_resource type="PackedScene" uid="uid://cfadim35a72rs" path="res://Assets/BR290/Scenes/Enemies/redcar.tscn" id="6_ew8ps"]
+[ext_resource type="PackedScene" uid="uid://gpe8tsjjspmv" path="res://Assets/BR290/Scenes/Enemies/redtruck.tscn" id="7_tm221"]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_518io")
+Car_Scenes = Array[PackedScene]([ExtResource("2_5jjrk"), ExtResource("3_p108i"), ExtResource("4_woe6p"), ExtResource("5_1hmw5"), ExtResource("6_ew8ps"), ExtResource("7_tm221")])
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

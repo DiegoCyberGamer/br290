@@ -1,0 +1,255 @@
+[gd_scene load_steps=8 format=3 uid="uid://rjb8o0km15wt"]
+
+[ext_resource type="Script" path="res://Scripts/BR290/Behaviors/Game_Over.gd" id="1_agkau"]
+[ext_resource type="FontFile" uid="uid://d1akpsho0psmt" path="res://Assets/BR290/Score/W95FA.otf" id="1_ia3n8"]
+[ext_resource type="Texture2D" uid="uid://cu14yxsjn7g0u" path="res://Assets/BR290/Score/BlueEgg.png" id="2_0twag"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gosye"]
+texture = ExtResource("2_0twag")
+region_rect = Rect2(2, 0, 28, 32)
+
+[sub_resource type="Animation" id="Animation_d3vpn"]
+resource_name = "Fade_in"
+length = 4.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameOver:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0.301961), Color(0, 0, 0, 0.141176), Color(0, 0, 0, 0.301961)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FinalText:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.0352941), Color(0.333333, 0.333333, 0.333333, 0.105882), Color(0.666667, 0.666667, 0.666667, 0.113725), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BluePoints:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.0352941), Color(0.333333, 0.333333, 0.333333, 0.105882), Color(0.666667, 0.666667, 0.666667, 0.113725), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FinalPoints:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.0352941), Color(0.333333, 0.333333, 0.333333, 0.105882), Color(0.666667, 0.666667, 0.666667, 0.113725), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Number:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.0352941), Color(0.333333, 0.333333, 0.333333, 0.105882), Color(0.666667, 0.666667, 0.666667, 0.113725), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.0352941), Color(0.333333, 0.333333, 0.333333, 0.105882), Color(0.666667, 0.666667, 0.666667, 0.113725), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Record:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.0352941), Color(0.333333, 0.333333, 0.333333, 0.105882), Color(0.666667, 0.666667, 0.666667, 0.113725), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BluePoints2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 4, 4.0001),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.0352941), Color(0.666667, 0.666667, 0.666667, 0.113725), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7htar"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameOver:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r3tui"]
+_data = {
+"Fade_in": SubResource("Animation_d3vpn"),
+"RESET": SubResource("Animation_7htar")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_agkau")
+
+[node name="GameOver" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="FinalText" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.138
+anchor_top = 0.185
+anchor_right = 0.138
+anchor_bottom = 0.185
+offset_left = 5.024
+offset_top = -51.88
+offset_right = 842.024
+offset_bottom = 165.12
+theme_override_fonts/font = ExtResource("1_ia3n8")
+theme_override_font_sizes/font_size = 100
+text = "Fim do Jogo
+Sua pontuação final:"
+horizontal_alignment = 1
+
+[node name="BluePoints" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = 0.362
+anchor_top = 0.5
+anchor_right = 0.362
+anchor_bottom = 0.5
+offset_left = -256.024
+offset_top = -27.0
+offset_right = 52.976
+offset_bottom = 172.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gosye")
+
+[node name="BluePoints2" type="Panel" parent="."]
+modulate = Color(0.666667, 0.666667, 0.666667, 0.113725)
+anchors_preset = -1
+anchor_left = 0.362
+anchor_top = 0.5
+anchor_right = 0.362
+anchor_bottom = 0.5
+offset_left = 534.976
+offset_top = 96.0
+offset_right = 705.976
+offset_bottom = 211.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gosye")
+
+[node name="FinalPoints" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.451
+anchor_top = 0.58
+anchor_right = 0.451
+anchor_bottom = 0.58
+offset_left = -248.552
+offset_top = -29.84
+offset_right = -160.552
+offset_bottom = 112.16
+theme_override_fonts/font = ExtResource("1_ia3n8")
+theme_override_font_sizes/font_size = 150
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.023
+anchor_top = 0.849
+anchor_right = 0.023
+anchor_bottom = 0.849
+offset_left = 0.503998
+offset_top = -0.152039
+offset_right = 1108.5
+offset_bottom = 84.848
+theme_override_fonts/font = ExtResource("1_ia3n8")
+theme_override_font_sizes/font_size = 70
+text = "Pressione ENTER para tentar novamente"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Record" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.479
+anchor_top = 0.684
+anchor_right = 0.479
+anchor_bottom = 0.684
+offset_left = 0.191956
+offset_top = -0.231995
+offset_right = 434.192
+offset_bottom = 93.768
+theme_override_fonts/font = ExtResource("1_ia3n8")
+theme_override_font_sizes/font_size = 50
+text = "Seu maior recorde:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Number" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.85
+anchor_top = 0.639
+anchor_right = 0.85
+anchor_bottom = 0.639
+offset_left = 41.8
+offset_top = 39.9279
+offset_right = 81.8
+offset_bottom = 97.9279
+theme_override_fonts/font = ExtResource("1_ia3n8")
+theme_override_font_sizes/font_size = 60
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r3tui")
+}
+autoplay = "Fade_in"

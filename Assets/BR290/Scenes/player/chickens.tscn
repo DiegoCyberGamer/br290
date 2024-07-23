@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqakjqvkquqho"]
+
+[ext_resource type="Script" path="res://Scripts/BR290/Spawners/ChickenRespawner.gd" id="1_124tk"]
+
+[node name="Chickens" type="Node"]
+
+[node name="ChickenRespawner" type="Node2D" parent="." groups=["Respawner"]]
+position = Vector2(146, 596)
+script = ExtResource("1_124tk")
